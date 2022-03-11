@@ -1,0 +1,30 @@
+@import 'variables'; //пишем переменные
+@import 'reset'; //сборс стилей
+@import 'fonts'; //подключаем шрифты (локально)
+
+//подключаем БЭМ блоки
+@import 'blocks/header';
+@import 'blocks/content';
+@import 'blocks/footer';
+
+.container {
+  position: relative;
+}
+
+.title {
+  font-size: 96px;
+}
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+
+    .title {
+        font-size: 36px;
+      }
+  }

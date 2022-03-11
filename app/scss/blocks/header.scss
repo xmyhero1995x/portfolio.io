@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  z-index: 1;
+}
+
+.header__inner {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: $first;
+  font-family: 'MajorMonoDisplay';
+}
+
+.header__name {
+  padding-top: 50px;
+  padding-left: 50px;
+  position: absolute;
+  color: $fourth;
+}
+
+.header__coordinates {
+  padding-top: 20px;
+}
+
+.header__greeting {
+  width: 70%;
+  padding: 200px 50px 0 50px;
+}
+
+.header__greeting_link {
+  color: $fourth;
+  font-size: 150px;
+}
+
+.header__greeting_link:hover {
+  color: $third;
+}
+
+.header__ticker {
+  padding: 200px 10px;
+  width: 110px;
+  font-size: 24px;
+  color: $fourth;
+}
+
+.header__scroll {
+  display: flex;
+  height: 100vh;
+  width: 3px;
+  background-color: $fourth;
+  animation: scrollDownLine 4s infinite;
+}
+
+@keyframes scrollDownLine {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+
+  to {
+    height: 100vh;
+    opacity: 1;
+  }
+}
+
+.header__scroll_desc {
+  color: $third;
+  writing-mode: vertical-rl;
+  padding: 5px 0 0 5px;
+}
+
+.header__date {
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  padding: 30px;
+  font-size: 24px;
+  color: $fourth;
+  writing-mode: vertical-rl;
+}
+
+//media
+
+@media (max-width: 1199px) {
+  .header__greeting_link {
+    font-size: 125px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__greeting_link {
+    font-size: 98px;
+  }
+
+  .header__ticker {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .header__greeting_link {
+    font-size: 68px;
+  }
+
+  .header__coordinates {
+    padding-top: 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .header__name {
+    width: 70%;
+    padding: 20px 50px 0 20px;
+  }
+
+  .header__greeting_link {
+    font-size: 32px;
+  }
+
+  .header__date {
+    display: none;
+  }
+
+  .header__scroll {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header__name {
+    padding: 20px 10px 0 20px;
+  }
+
+  .header__greeting {
+    padding: 200px 40px 0;
+  }
+
+  .header__greeting_link {
+    font-size: 36px;
+  }
+}

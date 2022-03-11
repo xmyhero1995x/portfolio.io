@@ -1,0 +1,1 @@
+(()=>{var e=["#999","#000","==++","1234","@__-","%3$@","#&3^","@#*)","</p>","@16#","#@$#","&#p^","*633","####"];var t=document.getElementById("header__ticker");setInterval((function(){return t.innerHTML=function(e){return e[Math.floor(Math.random()*e.length)]}(e)}),500);var n=new Date;document.getElementById("header__date").innerHTML=n.toLocaleDateString()})();
